@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Sunset Resort</title>
+    <link rel="stylesheet" href="registerstyle.css">
+    <script src="validate.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <h1>Masti Resort</h1>
+            <nav>
+                <a href="home.html">Home</a> |
+                <a href="register.html">Register</a> |
+                <a href="login.html">Login</a> |
+            </nav>
+        </div>
+
+        <!-- Registration Form Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Create Account & Book Room</h2>
+                <p>Fill the form below to register and make your first booking</p>
+                <form action="register.php" method="POST">
+                    <!-- User Details -->
+                    <div class="form-group">
+                        <h3>Personal Details</h3>
+                        <input type="text" name="name" placeholder="Full Name *" required>
+                        <input type="email" name="email" placeholder="Email Address *" required>
+                        <input type="tel" name="phone" placeholder="Phone Number *" required>
+                        <input type="password" name="password" placeholder="Password (min 6 chars) *" required>
+                    </div>
+
+                    <!-- Booking Details -->
+                    <div class="form-group">
+                        <h3>Booking Details</h3>
+                        <select name="room_type" required>
+                            <option value="">Select Room Type</option>
+                            <option value="Deluxe">Deluxe Room - ₹28,000/night</option>
+                            <option value="Premium">Premium Suite - ₹75,000/night</option>
+                            <option value="Villa">Beach Villa - ₹1,50,000+/night</option>
+                        </select>
+                        
+                        <div class="date-row">
+                            <input type="date" name="check_in" placeholder="Check-in Date *" required>
+                            <input type="date" name="check_out" placeholder="Check-out Date *" required>
+                        </div>
+                        
+                        <input type="number" name="guests" placeholder="Number of Guests (1-6)" min="1" max="6" required>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Book & Register</button>
+                        <a href="home.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </form>
+
+                <div class="form-links">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 Masti Resort| College Project</p>
+        </div>
+    </div>
+</body>
+</html>
